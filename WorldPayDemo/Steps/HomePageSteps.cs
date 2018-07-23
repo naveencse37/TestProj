@@ -27,7 +27,7 @@ namespace WorldPayDemo.Steps
             homepage.ClickLink();
             //SeleniumSetMethods.Click("//a[contains(text(),'Company')]", "Xpath");
         }
-        
+        //test2
         [Given(@"I verify About Worldpay text")]
         public void GivenIVerifyAboutWorldpayText()
         {
