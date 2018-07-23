@@ -2,6 +2,8 @@
 using TechTalk.SpecFlow;
 using WorldPayDemo.Pages;
 using WorldPayDemo.Util;
+using TechTalk.SpecFlow.Assist;
+
 
 namespace WorldPayDemo.Steps
 {
@@ -50,6 +52,19 @@ namespace WorldPayDemo.Steps
             Console.WriteLine("name is " + name);
             homepage.FillForm(name, telephone, email);
         }
+
+        [Then(@"I fill in form")]
+        public void ThenIFillInForm(Table table)
+        {
+            //foreach (var row in table.Rows)
+            //{
+            //    homepage.SendKeys(row["name"], row["telephone"], row["email"]);
+            //}
+            var fill = table.CreateInstance<Form>();
+            homepage.SendKeys(fill.name, fill.telephone, fill.email);
+         }
+
+        //test
 
         [Then(@"I close the browser")]
         public void ThenICloseTheBrowser()

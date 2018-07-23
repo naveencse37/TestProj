@@ -31,11 +31,18 @@ namespace WorldPayDemo.Pages
             return driver.Title;
         }
 
+        public void SendKeys(string name, string telephone, string email)
+        {
+            driver.FindElement(nameText).SendKeys(name);
+           driver.FindElement(telephoneNumber).SendKeys(telephone);
+            driver.FindElement(emailAddress).SendKeys(email);
+
+        }
         public void VerifyText()
         {
             driver.FindElement(text);
             Console.WriteLine(text);
-        }
+            }
 
     public void ClickContactus()
         { 

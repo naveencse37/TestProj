@@ -88,16 +88,48 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void FillContactUsForm(string name, string telephone, string email, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fill Contact Us Form", exampleTags);
-#line 12
+#line 11
 this.ScenarioSetup(scenarioInfo);
-#line 14
+#line 13
  testRunner.Given("I navigate to worldpay website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 15
+#line 14
  testRunner.And("I click Contact us link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
+#line 15
  testRunner.And("I click Arrange a free call button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
+#line 16
  testRunner.Then(string.Format("I fill form {0}, {1}, {2}", name, telephone, email), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Fill Contact Us Form again")]
+        [NUnit.Framework.CategoryAttribute("Current")]
+        public virtual void FillContactUsFormAgain()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fill Contact Us Form again", new string[] {
+                        "Current"});
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+ testRunner.Given("I navigate to worldpay website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.And("I click Contact us link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.And("I click Arrange a free call button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "telephone",
+                        "email"});
+            table1.AddRow(new string[] {
+                        "test",
+                        "07777777777",
+                        "test@test.com"});
+#line 27
+ testRunner.Then("I fill in form", ((string)(null)), table1, "Then ");
+#line 30
+ testRunner.Then("I close the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
