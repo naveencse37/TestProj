@@ -16,7 +16,7 @@ namespace WorldPayDemo.Util
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Url = "https://www.worldpay.com/uk";
+            driver.Url = "https://www.ultimateqa.com/automation/";
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
          }
 

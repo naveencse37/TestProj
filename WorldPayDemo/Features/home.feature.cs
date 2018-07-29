@@ -104,11 +104,9 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Fill Contact Us Form again")]
-        [NUnit.Framework.CategoryAttribute("Current")]
         public virtual void FillContactUsFormAgain()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fill Contact Us Form again", new string[] {
-                        "Current"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Fill Contact Us Form again", ((string[])(null)));
 #line 23
 this.ScenarioSetup(scenarioInfo);
 #line 24
@@ -128,7 +126,35 @@ this.ScenarioSetup(scenarioInfo);
                         "test@test.com"});
 #line 27
  testRunner.Then("I fill in form", ((string)(null)), table1, "Then ");
-#line 30
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Select a sector")]
+        [NUnit.Framework.CategoryAttribute("Current")]
+        public virtual void SelectASector()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Select a sector", new string[] {
+                        "Current"});
+#line 32
+this.ScenarioSetup(scenarioInfo);
+#line 33
+ testRunner.Given("I navigate to worldpay website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+ testRunner.And("I click Insights link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.And("I click Worldpay Market Insights link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.And("I switch to new window", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "sector"});
+            table2.AddRow(new string[] {
+                        "Art & Leisure"});
+#line 37
+ testRunner.Then("I select below Sector:", ((string)(null)), table2, "Then ");
+#line 40
  testRunner.Then("I close the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

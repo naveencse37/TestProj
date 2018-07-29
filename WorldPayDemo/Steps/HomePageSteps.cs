@@ -3,7 +3,8 @@ using TechTalk.SpecFlow;
 using WorldPayDemo.Pages;
 using WorldPayDemo.Util;
 using TechTalk.SpecFlow.Assist;
-
+using System.Linq;
+using OpenQA.Selenium.Support.UI;
 
 namespace WorldPayDemo.Steps
 {
@@ -64,7 +65,32 @@ namespace WorldPayDemo.Steps
             homepage.SendKeys(fill.name, fill.telephone, fill.email);
          }
 
-        //test
+        [Given(@"I click Insights link")]
+        public void GivenIClickInsightsLink()
+        {
+            homepage.ClickInsights();
+        }
+
+        [Given(@"I click Worldpay Market Insights link")]
+        public void GivenIClickWorldpayMarketInsightsLink()
+        {
+            homepage.ClickWorldpayMarketInsights();
+        }
+
+        [Given(@"I switch to new window")]
+        public void GivenISwitchToNewWindow()
+        {
+            driver.SwitchTo().Window(driver.WindowHandles.Last());
+
+        }
+
+        [Then(@"I select below Sector:")]
+        public void ThenISelectBelowSector(Table table)
+        {
+            var sectorSelect = table.CreateInstance<Select>();
+            homepage.select(sectorSelect.sector);
+        }
+
 
         [Then(@"I close the browser")]
         public void ThenICloseTheBrowser()
