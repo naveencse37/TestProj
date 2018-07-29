@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldPayDemo", "WorldPayDemo\WorldPayDemo.csproj", "{BFF4EA1D-24CF-4BFC-8E0A-997CAFFB3321}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumDemo", "WorldPayDemo\SeleniumDemo.csproj", "{BFF4EA1D-24CF-4BFC-8E0A-997CAFFB3321}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDemo", "NDemo\NDemo.csproj", "{659309B9-4ECC-474D-99EF-91F8758DBA5C}"
 EndProject
